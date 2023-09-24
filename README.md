@@ -18,4 +18,5 @@ npm start
 
 - [React](https://react.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [json-server](https://github.com/typicode/json-server)
 - [Tailwind](https://tailwindui.com/)
