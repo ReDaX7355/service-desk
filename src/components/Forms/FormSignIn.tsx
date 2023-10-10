@@ -18,7 +18,9 @@ const FormSignIn: FC<FormSignInProps> = ({ hundleChangeForm }) => {
     handleSubmit,
   } = useForm<SignInForm>();
 
-  const onSubmit: SubmitHandler<SignInForm> = () => null;
+  const onSubmit: SubmitHandler<SignInForm> = () => {
+    null;
+  };
 
   return (
     <form
@@ -42,29 +44,6 @@ const FormSignIn: FC<FormSignInProps> = ({ hundleChangeForm }) => {
             {errors.login.message}
           </p>
         )}
-
-        {/* <input
-            className="border-2 border-secondary py-1 px-3 rounded focus:outline-2 outline-primary transition-all mt-4"
-            {...register('email', {
-              required: {
-                value: true,
-                message: 'Заполните поле "Email"',
-              },
-              pattern: {
-                value:
-                  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
-                message: 'Непрвильно введен Email',
-              },
-            })}
-            type="email"
-            placeholder="Email"
-            aria-invalid={errors.email ? 'true' : 'false'}
-          />
-        {errors.login?.type === 'required' && (
-          <p role="alert" className="text-sm text-danger mt-1">
-            {errors.email?.message}
-          </p>
-        )} */}
 
         <input
           className="mt-4 rounded border-2 border-secondary px-3 py-1 outline-primary focus:outline-2"

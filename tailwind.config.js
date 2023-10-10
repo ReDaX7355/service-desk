@@ -5,7 +5,7 @@ export const theme = {
     colors: {
       //https://colorscheme.ru/#3c31Tw0w0w0w0
       primary: '#00A383',
-      'primary-hover': '#1F7A68',
+      'primary-bold': '#1F7A68',
       secondary: '#5ED1BA',
       agree: '#006A55',
       warninng: '#FFA100',

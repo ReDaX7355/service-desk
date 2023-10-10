@@ -12,6 +12,7 @@ import ErrorPage from './pages/ErrorPage';
 import MainPage from './pages/MainPage';
 import Root from './pages/Root';
 import './style.css';
+import MainContext from './context/MainState';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,6 +31,8 @@ const root = createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <MainContext>
+      <RouterProvider router={router} />
+    </MainContext>
   </React.StrictMode>
 );
