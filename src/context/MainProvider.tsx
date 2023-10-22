@@ -30,6 +30,8 @@ export const mainReduser: Reducer<initState, reduserAction> = (
   switch (action.type) {
     case ACTION_TYPES.SIGN_IN:
       return { ...state, auth: true };
+    case ACTION_TYPES.SIGN_OUT:
+      return { ...state, auth: false };
 
     default:
       return state;
@@ -43,6 +45,7 @@ interface MainStateProps {
 interface contextValueInterface {
   state: typeof defaultState;
   signIn: (login: string) => void;
+  signOut: () => void;
 }
 
 export const MainContext = createContext<Partial<contextValueInterface>>({});
@@ -54,9 +57,14 @@ const MainProvider: FC<MainStateProps> = ({ children }) => {
     dispatch({ type: ACTION_TYPES.SIGN_IN, payload: login });
   };
 
+  const signOut = () => {
+    dispatch({ type: ACTION_TYPES.SIGN_OUT });
+  };
+
   const initValue: contextValueInterface = {
     state,
     signIn,
+    signOut,
   };
 
   return (

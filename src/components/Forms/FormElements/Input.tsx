@@ -18,7 +18,7 @@ const Input: React.FC<InputProps> = ({
       type={type}
       placeholder={placeholder}
       onChange={(e) => onChangeFunction(e.target.value)}
-      className="rounded border-2 border-primary px-3 py-1 transition placeholder:text-secondary focus:border-primary-hover focus:outline-none"
+      className="rounded border-2 border-primary px-3 py-1 transition placeholder:text-secondary focus:border-primary focus:outline-none"
       {...props}
     />
   );
