@@ -12,13 +12,15 @@ import ErrorPage from './pages/ErrorPage';
 import MainPage from './pages/MainPage';
 import Root from './pages/Root';
 import './style.css';
-import MainContext from './context/MainState';
+import MainProvider from './context/MainProvider';
+import TicketsPage from './pages/TicketsPage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />} errorElement={<ErrorPage />}>
       <Route index element={<MainPage />} />
       <Route path="auth" element={<AuthPage />} />
+      <Route path="tickets" element={<TicketsPage />} />
     </Route>
   )
 );
@@ -31,8 +33,8 @@ const root = createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
   <React.StrictMode>
-    <MainContext>
+    <MainProvider>
       <RouterProvider router={router} />
-    </MainContext>
+    </MainProvider>
   </React.StrictMode>
 );

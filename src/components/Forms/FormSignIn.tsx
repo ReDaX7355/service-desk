@@ -1,5 +1,8 @@
-import React, { FC } from 'react';
+import axios from 'axios';
+import React, { FC, useContext, useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import { MainContext } from './../../context/MainProvider';
 
 interface SignInForm {
   login: string;
@@ -18,8 +21,27 @@ const FormSignIn: FC<FormSignInProps> = ({ hundleChangeForm }) => {
     handleSubmit,
   } = useForm<SignInForm>();
 
-  const onSubmit: SubmitHandler<SignInForm> = () => {
-    null;
+  const { signIn } = useContext(MainContext);
+  const navigate = useNavigate();
+
+  const [invalidForm, setInvalidForm] = useState<string>('');
+
+  const onFocusInput = () => {
+    setInvalidForm('');
+  };
+
+  const onSubmit: SubmitHandler<SignInForm> = (data) => {
+    //Вынести логику в api
+    axios.get(`http://localhost:3000/users?login=${data.login}`).then((res) => {
+      if (res.status == 200) {
+        if (res.data[0]?.password == data.password) {
+          signIn?.(data.login);
+          navigate('/tickets');
+        } else {
+          setInvalidForm('Неверный логин или пароль');
+        }
+      }
+    });
   };
 
   return (
@@ -36,6 +58,7 @@ const FormSignIn: FC<FormSignInProps> = ({ hundleChangeForm }) => {
               message: 'Заполните поле "Логин"',
             },
           })}
+          onFocus={() => onFocusInput()}
           placeholder="Логин"
           aria-invalid={errors.login ? 'true' : 'false'}
         />
@@ -54,6 +77,7 @@ const FormSignIn: FC<FormSignInProps> = ({ hundleChangeForm }) => {
               message: 'Заполните поле "Пароль"',
             },
           })}
+          onFocus={() => onFocusInput()}
           placeholder="Пароль"
           aria-invalid={errors.password ? 'true' : 'false'}
         />
@@ -63,6 +87,7 @@ const FormSignIn: FC<FormSignInProps> = ({ hundleChangeForm }) => {
           </p>
         )}
       </fieldset>
+      <p className="text-danger">{invalidForm}</p>
       <fieldset className="flex items-center justify-between">
         <input
           type="submit"
