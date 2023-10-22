@@ -1,15 +1,24 @@
 import { Reducer } from 'react';
-import { types } from './types';
-import { MainContextType } from '../types/MainContext';
-import { ActionType } from '../types/actionType';
 
-export const MainReduser: Reducer<MainContextType, ActionType> = (
+import { initState } from './defaultstate';
+
+export const enum ACTION_TYPES {
+  SIGN_IN,
+  SIGN_OUT,
+}
+
+type reduserAction = {
+  type: ACTION_TYPES;
+  payload?: string;
+};
+
+export const mainReduser: Reducer<initState, reduserAction> = (
   state,
   action
-): MainContextType => {
+): initState => {
   switch (action.type) {
-    case types.SIGN_IN:
-      return { ...state, userID: action.payload, auth: true };
+    case ACTION_TYPES.SIGN_IN:
+      return { ...state, auth: true };
 
     default:
       return state;
