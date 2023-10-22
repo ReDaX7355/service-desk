@@ -29,9 +29,9 @@ export const mainReduser: Reducer<initState, reduserAction> = (
 ): initState => {
   switch (action.type) {
     case ACTION_TYPES.SIGN_IN:
-      return { ...state, auth: true };
+      return { ...state, auth: true, login: action.payload };
     case ACTION_TYPES.SIGN_OUT:
-      return { ...state, auth: false };
+      return { ...state, auth: false, login: '' };
 
     default:
       return state;
@@ -55,10 +55,12 @@ const MainProvider: FC<MainStateProps> = ({ children }) => {
 
   const signIn = (login: string) => {
     dispatch({ type: ACTION_TYPES.SIGN_IN, payload: login });
+    localStorage.setItem('userName', login);
   };
 
   const signOut = () => {
     dispatch({ type: ACTION_TYPES.SIGN_OUT });
+    localStorage.removeItem('userName');
   };
 
   const initValue: contextValueInterface = {
