@@ -1,15 +1,16 @@
 import React, { FC, useReducer, createContext } from 'react';
 import { Reducer } from 'react';
+import { IUser } from './../types/IUser';
 
 export type initState = {
   auth: boolean;
-  login?: string;
+  user?: string | object | undefined;
   theme: string;
 };
 
 export const defaultState: initState = {
   auth: false,
-  login: '',
+  user: undefined,
   theme: 'light',
 };
 
@@ -20,7 +21,7 @@ export const enum ACTION_TYPES {
 
 type reduserAction = {
   type: ACTION_TYPES;
-  payload?: string;
+  payload?: string | object;
 };
 
 export const mainReduser: Reducer<initState, reduserAction> = (
@@ -29,9 +30,9 @@ export const mainReduser: Reducer<initState, reduserAction> = (
 ): initState => {
   switch (action.type) {
     case ACTION_TYPES.SIGN_IN:
-      return { ...state, auth: true, login: action.payload };
+      return { ...state, auth: true, user: action.payload };
     case ACTION_TYPES.SIGN_OUT:
-      return { ...state, auth: false, login: '' };
+      return { ...state, auth: false, user: undefined };
 
     default:
       return state;
@@ -44,7 +45,7 @@ interface MainStateProps {
 
 interface contextValueInterface {
   state: typeof defaultState;
-  signIn: (login: string) => void;
+  signIn: (data: IUser | undefined) => void;
   signOut: () => void;
 }
 
@@ -53,14 +54,13 @@ export const MainContext = createContext<Partial<contextValueInterface>>({});
 const MainProvider: FC<MainStateProps> = ({ children }) => {
   const [state, dispatch] = useReducer(mainReduser, defaultState);
 
-  const signIn = (login: string) => {
-    dispatch({ type: ACTION_TYPES.SIGN_IN, payload: login });
-    localStorage.setItem('userName', login);
+  const signIn = (data: IUser | undefined) => {
+    dispatch({ type: ACTION_TYPES.SIGN_IN, payload: data });
   };
 
   const signOut = () => {
     dispatch({ type: ACTION_TYPES.SIGN_OUT });
-    localStorage.removeItem('userName');
+    localStorage.removeItem('user_login');
   };
 
   const initValue: contextValueInterface = {

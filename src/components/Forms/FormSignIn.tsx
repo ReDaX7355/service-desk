@@ -3,12 +3,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { MainContext } from './../../context/MainProvider';
 import { useNavigate } from 'react-router-dom';
 import AuthService from '../../service/AuthService';
-
-interface SignInForm {
-  login: string;
-  email: string;
-  password: string;
-}
+import { SignInForm } from '../../types/FormInterfaces';
 
 interface FormSignInProps {
   hundleChangeForm: () => void;
@@ -31,15 +26,16 @@ const FormSignIn: FC<FormSignInProps> = ({ hundleChangeForm }) => {
     setInvalidForm('');
   };
 
-  const onSubmit: SubmitHandler<SignInForm> = (data) => {
-    AuthService.loginUser(data.login, data.password).then(({ auth, error }) => {
-      if (!error && auth) {
-        signIn?.(data.login);
-        navigate('/tickets');
-      } else {
-        setInvalidForm(error);
-      }
-    });
+  const onSubmit: SubmitHandler<SignInForm> = async (data) => {
+    const response = await AuthService.loginUser(data.login, data.password);
+
+    if (response.error) {
+      setInvalidForm(response.error);
+    } else {
+      signIn?.(response.data);
+      localStorage.setItem('user_login', data.login);
+      navigate('/tickets');
+    }
   };
 
   return (

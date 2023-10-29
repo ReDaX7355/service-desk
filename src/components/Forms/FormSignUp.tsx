@@ -1,11 +1,9 @@
-import React, { FC } from 'react';
+import React, { FC, useContext, useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-
-interface SignUpForm {
-  login: string;
-  email: string;
-  password: string;
-}
+import { MainContext } from '../../context/MainProvider';
+import AuthService from '../../service/AuthService';
+import { SignUpForm } from './../../types/FormInterfaces';
+import { useNavigate } from 'react-router-dom';
 
 interface FormSignUpProps {
   hundleChangeForm: () => void;
@@ -18,7 +16,27 @@ const FormSignUp: FC<FormSignUpProps> = ({ hundleChangeForm }) => {
     handleSubmit,
   } = useForm<SignUpForm>();
 
-  const onSubmit: SubmitHandler<SignUpForm> = () => null;
+  const { signIn } = useContext(MainContext);
+
+  const navigate = useNavigate();
+
+  const [invalidForm, setInvalidForm] = useState<string | undefined>('');
+
+  const onFocusInput = () => {
+    setInvalidForm('');
+  };
+
+  const onSubmit: SubmitHandler<SignUpForm> = async (data) => {
+    const response = await AuthService.registration(data);
+
+    if (response.error) {
+      setInvalidForm(response.error);
+    } else {
+      signIn?.(response.data);
+      localStorage.setItem('user_login', data.login);
+      navigate('/tickets');
+    }
+  };
 
   return (
     <form
@@ -28,6 +46,24 @@ const FormSignUp: FC<FormSignUpProps> = ({ hundleChangeForm }) => {
       <fieldset className="flex flex-col">
         <input
           className="rounded border-2 border-secondary px-3 py-1 outline-primary transition-all focus:outline-2 "
+          {...register('full_name', {
+            required: {
+              value: true,
+              message: 'Заполните поле "ФИО"',
+            },
+          })}
+          placeholder="ФИО"
+          aria-invalid={errors.full_name ? 'true' : 'false'}
+          onFocus={() => onFocusInput()}
+        />
+        {errors.full_name?.type === 'required' && (
+          <p role="alert" className="mt-1 text-sm text-danger">
+            {errors.full_name.message}
+          </p>
+        )}
+
+        <input
+          className="mt-4 rounded border-2 border-secondary px-3 py-1 outline-primary transition-all focus:outline-2 "
           {...register('login', {
             required: {
               value: true,
@@ -36,6 +72,7 @@ const FormSignUp: FC<FormSignUpProps> = ({ hundleChangeForm }) => {
           })}
           placeholder="Логин"
           aria-invalid={errors.login ? 'true' : 'false'}
+          onFocus={() => onFocusInput()}
         />
         {errors.login?.type === 'required' && (
           <p role="alert" className="mt-1 text-sm text-danger">
@@ -60,6 +97,7 @@ const FormSignUp: FC<FormSignUpProps> = ({ hundleChangeForm }) => {
           type="email"
           placeholder="Email"
           aria-invalid={errors.email ? 'true' : 'false'}
+          onFocus={() => onFocusInput()}
         />
         {errors.login?.type === 'required' && (
           <p role="alert" className="mt-1 text-sm text-danger">
@@ -78,6 +116,7 @@ const FormSignUp: FC<FormSignUpProps> = ({ hundleChangeForm }) => {
           })}
           placeholder="Пароль"
           aria-invalid={errors.password ? 'true' : 'false'}
+          onFocus={() => onFocusInput()}
         />
         {errors.password?.type === 'required' && (
           <p role="alert" className="mt-1 text-sm text-danger">
@@ -85,10 +124,11 @@ const FormSignUp: FC<FormSignUpProps> = ({ hundleChangeForm }) => {
           </p>
         )}
       </fieldset>
+      <p className="text-danger">{invalidForm}</p>
       <fieldset className="flex items-center justify-between">
         <input
           type="submit"
-          value="Войти"
+          value="Регистрация"
           className="rounded bg-primary px-5 py-1.5 text-white transition hover:bg-agree"
         />
         <p
