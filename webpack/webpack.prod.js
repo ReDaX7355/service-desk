@@ -1,19 +1,20 @@
-const { merge } = require("webpack-merge");
-const path = require("path");
-const webpackConfig = require("./webpack.config");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+/* eslint-disable @typescript-eslint/no-var-requires */
+const { merge } = require('webpack-merge');
+const path = require('path');
+const webpackConfig = require('./webpack.config');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const plugins = [
   new MiniCssExtractPlugin({
-    filename: "[contenthash].css",
+    filename: '[contenthash].css',
   }),
   new CssMinimizerPlugin(),
 ];
 
 module.exports = merge(webpackConfig, {
-  mode: "production",
+  mode: 'production',
   devtool: false,
   plugins,
   optimization: {
@@ -34,7 +35,7 @@ module.exports = merge(webpackConfig, {
     ],
   },
   output: {
-    path: path.resolve(__dirname, "./../dist"),
-    filename: "[fullhash].js",
+    path: path.resolve(__dirname, './../dist'),
+    filename: '[fullhash].js',
   },
 });

@@ -70,6 +70,7 @@
     {
       "id": 1,
       "full_name": "Петров Алексей Евгеньевич",
+      "email": "apetrov@mail.ru",
       "login": "apetrov",
       "password": "12345",
       "role": "user"
@@ -77,6 +78,7 @@
     {
       "id": 2,
       "full_name": "Ветрова Анастасия Сергеевна",
+      "email": "avetrova@mail.ru",
       "login": "avetrova",
       "password": "12345",
       "role": "user"
@@ -84,6 +86,7 @@
     {
       "id": 3,
       "full_name": "Новиков Сергей Витальевич",
+      "email": "snovikov@mail.ru",
       "login": "snovikov",
       "password": "12345",
       "role": "user"
@@ -91,6 +94,7 @@
     {
       "id": 4,
       "full_name": "Семенова Анна Васильевна",
+      "email": "asemenova@mail.ru",
       "login": "asemenova",
       "password": "12345",
       "role": "support"
@@ -98,6 +102,7 @@
     {
       "id": 5,
       "full_name": "Павлов Антон Константинович",
+      "email": "apavlov@mail.ru",
       "login": "apavlov",
       "password": "12345",
       "role": "user"
@@ -105,6 +110,7 @@
     {
       "id": 6,
       "full_name": "Иванов Иван Иванович",
+      "email": "iivanov@mail.ru",
       "login": "iivanov",
       "password": "12345",
       "role": "support"
