@@ -116,6 +116,14 @@
       "role": "support"
     },
     {
+      "id": 7,
+      "full_name": "Антипова Светлана Евгеньевна",
+      "email": "santipova@mail.ru",
+      "login": "santipova",
+      "password": "12345",
+      "role": "user"
+    },
+    {
       "id": "a1a67809-6746-4a96-a6ee-2a162dc46c92",
       "full_name": "Cапронов Руслан Иванович",
       "email": "rsapronov@mail.com",

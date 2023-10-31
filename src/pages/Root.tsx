@@ -29,7 +29,7 @@ function Root() {
     <>
       {!loading && (
         <>
-          <Header />
+          <Header key="header" />
           <div className="container m-auto px-[20px] py-[50px]">
             <Outlet />
           </div>
