@@ -18,7 +18,7 @@ const MainProvider: FC<MainStateProps> = ({ children }) => {
   const [state, dispatch] = useReducer(mainReduser, defaultState);
 
   const signIn = (data: IUser | undefined) => {
-    dispatch({ type: ACTION_TYPES.SIGN_IN, payload: data });
+    dispatch({ type: ACTION_TYPES.SIGN_IN, userData: data });
   };
 
   const signOut = () => {

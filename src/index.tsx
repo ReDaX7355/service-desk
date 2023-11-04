@@ -14,6 +14,7 @@ import Root from './pages/Root';
 import './style.css';
 import MainProvider from './context/MainProvider';
 import TicketsPage from './pages/TicketsPage';
+import ProfilePage from './pages/ProfilePage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
       <Route index element={<MainPage />} />
       <Route path="auth" element={<AuthPage />} />
       <Route path="tickets" element={<TicketsPage />} />
+      <Route path="profile" element={<ProfilePage />} />
     </Route>
   )
 );

@@ -16,20 +16,19 @@ const Menu = () => {
     <nav>
       <ul className="flex items-center gap-7">
         {state?.auth ? (
-          <li>
-            <p
-              onClick={() => signOutHandler()}
-              className="cursor-pointer rounded bg-primary px-3 py-2 text-sm text-white  transition hover:bg-primary"
-            >
-              Выход
-            </p>
-          </li>
+          <>
+            <li>
+              <p className="text-white">{state.user?.full_name}</p>
+            </li>
+            <li>
+              <p onClick={() => signOutHandler()} className="button-invert">
+                Выход
+              </p>
+            </li>
+          </>
         ) : (
           <li>
-            <Link
-              to="auth"
-              className=" rounded bg-primary px-3 py-2 text-sm  text-white transition hover:bg-primary"
-            >
+            <Link to="auth" className="button-invert">
               Вход / Регистрация
             </Link>
           </li>

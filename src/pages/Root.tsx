@@ -1,5 +1,6 @@
 import React, { useEffect, useContext, useState } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
+import Navigation from '../components/Navigation';
 import Header from '../components/UI/Header';
 import { MainContext } from './../context/MainProvider';
 import { getUserByLogin } from './../server/api';
@@ -30,6 +31,7 @@ function Root() {
       {!loading && (
         <>
           <Header key="header" />
+          <Navigation />
           <div className="container m-auto px-[20px] py-[50px]">
             <Outlet />
           </div>

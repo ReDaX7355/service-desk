@@ -10,4 +10,20 @@
   #root{
     @apply bg-gray-100;
   }
+
+  .button{
+    @apply cursor-pointer rounded bg-primary px-3 py-2 text-sm  text-white transition hover:bg-agree
+  }
+
+  .button-invert{
+    @apply cursor-pointer rounded bg-white px-3 py-2 text-sm  text-primary transition hover:bg-agree hover:text-white
+  }
+
+  .nav-link{
+    @apply block px-1 py-3 border-b-[3px] border-transparent hover:border-agree
+  }
+
+  .nav-link-active{
+    @apply block px-1 py-3 border-b-[3px] border-primary hover:border-agree
+  }
 }

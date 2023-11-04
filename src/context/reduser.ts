@@ -1,8 +1,9 @@
 import { Reducer } from 'react';
+import { IUser } from './../types/IUser';
 
 export type initState = {
   auth: boolean;
-  user?: string | object | undefined;
+  user?: IUser | null;
   theme: string;
 };
 
@@ -19,7 +20,8 @@ export const enum ACTION_TYPES {
 
 type reduserAction = {
   type: ACTION_TYPES;
-  payload?: string | object;
+  payload?: string;
+  userData?: IUser;
 };
 
 export const mainReduser: Reducer<initState, reduserAction> = (
@@ -28,9 +30,9 @@ export const mainReduser: Reducer<initState, reduserAction> = (
 ): initState => {
   switch (action.type) {
     case ACTION_TYPES.SIGN_IN:
-      return { ...state, auth: true, user: action.payload };
+      return { ...state, auth: true, user: action.userData };
     case ACTION_TYPES.SIGN_OUT:
-      return { ...state, auth: false, user: undefined };
+      return { ...state, auth: false, user: null };
 
     default:
       return state;

@@ -118,7 +118,7 @@ const FormAuth: FC = () => {
           <input
             type="submit"
             value={signUp ? 'Регистрация' : 'Вход'}
-            className="rounded bg-primary px-5 py-1.5 text-white transition hover:bg-agree"
+            className="button px-5"
           />
           <p
             className=" cursor-pointer select-none text-primary hover:text-agree hover:underline"
