@@ -51,7 +51,7 @@ const FormAuth: FC = () => {
       </h3>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="my-2 sm:my-5 flex flex-col gap-1 sm:gap-4"
+        className="my-2 flex flex-col gap-1 sm:my-5 sm:gap-4"
       >
         <fieldset className="flex flex-col">
           {signUp && (
