@@ -1,6 +1,6 @@
 import { getUserByLogin, registerUser, getUserByEmail } from './../server/api';
 import { v4 } from 'uuid';
-import { SignUpForm } from './../types/FormInterfaces';
+import { SignInForm, SignUpForm } from './../types/FormInterfaces';
 
 class AuthService {
   response = {
@@ -8,8 +8,8 @@ class AuthService {
     data: undefined,
   };
 
-  async loginUser(login: string, password: string) {
-    const candidate = await getUserByLogin(login);
+  async loginUser(data: SignInForm) {
+    const candidate = await getUserByLogin(data.login);
 
     if (!candidate) {
       return {
@@ -17,7 +17,7 @@ class AuthService {
         error: 'Неверный логин или пароль!',
       };
     } else {
-      if (candidate.password == password) {
+      if (candidate.password == data.password) {
         return { ...this.response, data: candidate };
       } else {
         return {

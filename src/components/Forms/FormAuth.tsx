@@ -32,7 +32,7 @@ const FormAuth: FC = () => {
     if (signUp) {
       response = await AuthService.registration(data);
     } else {
-      response = await AuthService.loginUser(data.login, data.password);
+      response = await AuthService.loginUser(data);
     }
 
     if (response.error) {
@@ -51,7 +51,7 @@ const FormAuth: FC = () => {
       </h3>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="my-5 flex flex-col gap-4"
+        className="my-2 sm:my-5 flex flex-col gap-1 sm:gap-4"
       >
         <fieldset className="flex flex-col">
           {signUp && (
