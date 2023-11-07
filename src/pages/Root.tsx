@@ -8,35 +8,33 @@ import { IUser } from './../types/IUser';
 
 function Root() {
   const { signIn } = useContext(MainContext);
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    setLoading(true);
-    const login = localStorage.getItem('user_login');
+    setIsLoading(true);
+    const userLogin = localStorage.getItem('user_login');
 
-    if (login) {
-      getUserByLogin(login).then((data: IUser | undefined) => {
+    if (userLogin) {
+      getUserByLogin(userLogin).then((data: IUser | undefined) => {
         signIn?.(data);
         navigate('/tickets');
-        setLoading(false);
+        setIsLoading(false);
       });
     }
-    setLoading(false);
+    setIsLoading(false);
   }, []);
+
+  if (isLoading) return <p>Загрузка...</p>;
 
   return (
     <>
-      {!loading && (
-        <>
-          <Header key="header" />
-          <Navigation />
-          <div className="container m-auto px-[20px] py-[50px]">
-            <Outlet />
-          </div>
-        </>
-      )}
+      <Header key="header" />
+      <Navigation />
+      <div className="container m-auto px-[20px] py-[50px]">
+        <Outlet />
+      </div>
     </>
   );
 }

@@ -1,4 +1,4 @@
-// interface Request {
+// interface ITicket {
 //   id: number;
 //   title: string;
 //   description: string;

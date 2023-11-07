@@ -6,16 +6,16 @@ export const $api = axios.create({
   timeout: 1000,
 });
 
-export const registerUser = async (user: IUser) => {
+export const userRegistration = async (user: IUser) => {
   await $api.post<IUser>('users', user);
 };
 
 export const getUser = async (
-  query: string,
-  data: string
+  param: string,
+  value: string
 ): Promise<IUser | undefined> => {
-  const res = await $api.get(`users?${query}=${data}`);
-  const userData = res.data ? res.data[0] : null;
+  const response = await $api.get(`users?${param}=${value}`);
+  const userData = response.data ? response.data[0] : null;
   return userData;
 };
 

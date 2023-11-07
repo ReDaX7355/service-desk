@@ -1,4 +1,4 @@
-import { getUserByLogin, registerUser, getUserByEmail } from './../server/api';
+import { getUserByLogin, userRegistration, getUserByEmail } from './../server/api';
 import { v4 } from 'uuid';
 import { SignInForm, SignUpForm } from './../types/FormInterfaces';
 
@@ -54,7 +54,7 @@ class AuthService {
         role: 'user',
       };
 
-      registerUser(newUser);
+      userRegistration(newUser);
 
       return {
         ...this.response,

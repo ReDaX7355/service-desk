@@ -20,7 +20,10 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />} errorElement={<ErrorPage />}>
       <Route index element={<MainPage />} />
-      <Route path="auth" element={<AuthPage />} />
+      <Route path="auth" element={<AuthPage />} />{' '}
+      {
+        // Переименовать auth
+      }
       <Route path="tickets" element={<TicketsPage />} />
       <Route path="profile" element={<ProfilePage />} />
     </Route>

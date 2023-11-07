@@ -1,13 +1,19 @@
 import { Reducer } from 'react';
 import { IUser } from './../types/IUser';
 
-export type initState = {
+type initStateType = {
   auth: boolean;
   user?: IUser | null;
   theme: string;
 };
 
-export const defaultState: initState = {
+type reduserActionType = {
+  type: ACTION_TYPES;
+  payload?: string;
+  userData?: IUser;
+};
+
+export const defaultState: initStateType = {
   auth: false,
   user: undefined,
   theme: 'light',
@@ -18,16 +24,10 @@ export const enum ACTION_TYPES {
   SIGN_OUT,
 }
 
-type reduserAction = {
-  type: ACTION_TYPES;
-  payload?: string;
-  userData?: IUser;
-};
-
-export const mainReduser: Reducer<initState, reduserAction> = (
+export const mainReduser: Reducer<initStateType, reduserActionType> = (
   state,
   action
-): initState => {
+): initStateType => {
   switch (action.type) {
     case ACTION_TYPES.SIGN_IN:
       return { ...state, auth: true, user: action.userData };

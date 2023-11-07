@@ -9,6 +9,7 @@ const Menu = () => {
 
   const signOutHandler = () => {
     signOut?.();
+    localStorage.removeItem('user_login');
     navigate('/');
   };
 

@@ -6,13 +6,13 @@ interface MainStateProps {
   children?: React.ReactNode;
 }
 
-interface contextValueInterface {
+interface contextValuesInterface {
   state: typeof defaultState;
   signIn: (data: IUser | undefined) => void;
   signOut: () => void;
 }
 
-export const MainContext = createContext<Partial<contextValueInterface>>({});
+export const MainContext = createContext<Partial<contextValuesInterface>>({});
 
 const MainProvider: FC<MainStateProps> = ({ children }) => {
   const [state, dispatch] = useReducer(mainReduser, defaultState);
@@ -23,17 +23,16 @@ const MainProvider: FC<MainStateProps> = ({ children }) => {
 
   const signOut = () => {
     dispatch({ type: ACTION_TYPES.SIGN_OUT });
-    localStorage.removeItem('user_login');
   };
 
-  const initValue: contextValueInterface = {
+  const initValues: contextValuesInterface = {
     state,
     signIn,
     signOut,
   };
 
   return (
-    <MainContext.Provider value={initValue}>{children}</MainContext.Provider>
+    <MainContext.Provider value={initValues}>{children}</MainContext.Provider>
   );
 };
 
