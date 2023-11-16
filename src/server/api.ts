@@ -30,3 +30,9 @@ export const getUserByEmail = async (
 ): Promise<IUser | undefined> => {
   return await getUser('email', email);
 };
+
+export const getAllTickets = async (
+) => {
+  const response = await $api.get('tickets');
+  return response.data;
+};

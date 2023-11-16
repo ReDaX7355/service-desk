@@ -1,12 +1,23 @@
-// interface ITicket {
-//   id: number;
-//   title: string;
-//   description: string;
-//   applicant: string;
-//   create_date: string;
-//   completed_date: string;
-//   type_request: string;
-//   userId: number;
-//   priority: string;
-//   completed: boolean;
-// }
+type messageType = {
+  timestamp: string;
+  author: string;
+  visible_to: string;
+  massage: string;
+};
+
+interface ITicket {
+  id: string;
+  ticket_number: number;
+  title: string;
+  description: string;
+  user_id: number;
+  created_at: string;
+  closed_at: string;
+  type_request: string;
+  assigned_to: string;
+  priority: string;
+  completed: boolean;
+  messages: messageType[];
+}
+
+export default ITicket;

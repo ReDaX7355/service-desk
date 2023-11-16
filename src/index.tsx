@@ -15,6 +15,8 @@ import './style.css';
 import MainProvider from './context/MainProvider';
 import TicketsPage from './pages/TicketsPage';
 import ProfilePage from './pages/ProfilePage';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import SearchTickets from './pages/SearchTickets';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,6 +27,7 @@ const router = createBrowserRouter(
         // Переименовать auth
       }
       <Route path="tickets" element={<TicketsPage />} />
+      <Route path="search_tickets" element={<SearchTickets />} />
       <Route path="profile" element={<ProfilePage />} />
     </Route>
   )
@@ -36,10 +39,14 @@ document.body.innerHTML = '<div id="root"></div>';
 // Render your React component instead
 const root = createRoot(document.getElementById('root') as HTMLElement);
 
+const queryClient = new QueryClient();
+
 root.render(
   <React.StrictMode>
-    <MainProvider>
-      <RouterProvider router={router} />
-    </MainProvider>
+    <QueryClientProvider client={queryClient}>
+      <MainProvider>
+        <RouterProvider router={router} />
+      </MainProvider>
+    </QueryClientProvider>
   </React.StrictMode>
 );
