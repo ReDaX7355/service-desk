@@ -36,6 +36,7 @@
     "no-empty": ["error"],
     "no-empty-function": ["error"],
     "require-await": ["error"],
+    "react/prop-types": "off",
 
     "arrow-spacing": ["warn", { "before": true, "after": true }],
     "block-spacing": ["warn"],

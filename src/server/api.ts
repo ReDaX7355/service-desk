@@ -31,8 +31,17 @@ export const getUserByEmail = async (
   return await getUser('email', email);
 };
 
-export const getAllTickets = async (
-) => {
+export const getAllTickets = async () => {
   const response = await $api.get('tickets');
+  return response.data;
+};
+
+export const getOpenTickets = async () => {
+  const response = await $api.get('tickets?completed=false');
+  return response.data;
+};
+
+export const searchTickets = async (value: string | number) => {
+  const response = await $api.get(`tickets?q=${value}`);
   return response.data;
 };

@@ -17,7 +17,7 @@ const TicketsTable: FC<TicketsTableProps> = ({
   if (isError) return <p>Error</p>;
 
   return (
-    <div className="px-7 ">
+    <div className="">
       {isLoading ? (
         // <TableLoader />
         <div>Loading</div>
