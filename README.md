@@ -5,8 +5,8 @@
 
 ---
 
-This application is a system for submitting and processing applications from users. 
-It contains functionality of sending, commenting and closing applications. There is also a division of users into roles: "Support" and "User".
+This application is a system for submitting and processing tickets from users.
+It contains functionality of sending, commenting and closing tickets. There is also a division of users into roles: "Support" and "User".
 
 Webpack and other configs were created from scratch.
 
