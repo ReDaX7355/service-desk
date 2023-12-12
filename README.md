@@ -37,8 +37,6 @@ To start the dev server, you need to write the commands:
 
 - [React Query](https://tanstack.com/query/v3/docs/react/overview/)
 
-- [TypeScript](https://www.typescriptlang.org/)
-
 - [json-server](https://github.com/typicode/json-server)
 
 - [Tailwind](https://tailwindui.com/)
