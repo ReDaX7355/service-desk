@@ -11,26 +11,31 @@ const Navigation = () => {
     <div className="bg-white">
       <div className="container mx-auto px-5">
         <ul className="flex gap-4">
-          <li>
-            <NavLink
-              to="/tickets"
-              className={({ isActive }) =>
-                [isActive ? 'nav-link-active' : 'nav-link'].join(' ')
-              }
-            >
-              Заявки
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/search_tickets"
-              className={({ isActive }) =>
-                [isActive ? 'nav-link-active' : 'nav-link'].join(' ')
-              }
-            >
-              Поиск по заявкам
-            </NavLink>
-          </li>
+          {state.user?.role === 'support' && (
+            <>
+              <li>
+                <NavLink
+                  to="/tickets"
+                  className={({ isActive }) =>
+                    [isActive ? 'nav-link-active' : 'nav-link'].join(' ')
+                  }
+                >
+                  Заявки
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/search_tickets"
+                  className={({ isActive }) =>
+                    [isActive ? 'nav-link-active' : 'nav-link'].join(' ')
+                  }
+                >
+                  Поиск по заявкам
+                </NavLink>
+              </li>
+            </>
+          )}
+
           <li>
             <NavLink
               to="/profile"

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 import ITicket from '../../types/ITicket';
 import HeaderCell from './TableComponents/HeaderCell';
 import TableRow from './TableComponents/TableRow';
@@ -9,11 +9,11 @@ interface TicketsTableProps {
   isLoading?: boolean;
 }
 
-const TicketsTable: FC<TicketsTableProps> = ({
+const TicketsTable: FC<TicketsTableProps> = memo(function TicketsTable({
   tickets,
   isError,
   isLoading,
-}) => {
+}) {
   if (isError) return <p>Error</p>;
 
   return (
@@ -22,7 +22,7 @@ const TicketsTable: FC<TicketsTableProps> = ({
         // <TableLoader />
         <div>Loading</div>
       ) : (
-        <div className="table-wrapper container m-auto my-4 h-[700px] overflow-auto rounded bg-white shadow-lg">
+        <div className="table-wrapper container m-auto h-[700px] overflow-auto rounded bg-white shadow-lg">
           <table className="table-tickets">
             <thead>
               <tr>
@@ -45,6 +45,6 @@ const TicketsTable: FC<TicketsTableProps> = ({
       )}
     </div>
   );
-};
+});
 
 export default TicketsTable;

@@ -41,6 +41,13 @@ export const getOpenTickets = async () => {
   return response.data;
 };
 
+export const getTicketByNumber = async (
+  number: string | number | undefined
+) => {
+  const response = await $api.get(`tickets?ticket_number=${number}`);
+  return response.data;
+};
+
 export const searchTickets = async (value: string | number) => {
   const response = await $api.get(`tickets?q=${value}`);
   return response.data;

@@ -1,23 +1,18 @@
-type messageType = {
-  timestamp: string;
-  author: string;
-  visible_to: string;
-  massage: string;
-};
+import IMessage from './IMessage';
 
 interface ITicket {
   id: string;
   ticket_number: number;
   title: string;
   description: string;
-  creator_id: number;
+  applicant_name: string;
   created_at: string;
   closed_at: string;
   type_request: string;
   assigned_to: string;
   priority: string;
   completed: boolean;
-  messages: messageType[];
+  messages: IMessage[];
 }
 
 export default ITicket;

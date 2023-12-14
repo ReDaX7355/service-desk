@@ -32,7 +32,7 @@ function Root() {
     <>
       <Header key="header" />
       <Navigation />
-      <div className="container m-auto px-[20px] py-[50px]">
+      <div className="container m-auto px-[20px] py-[40px]">
         <Outlet />
       </div>
     </>

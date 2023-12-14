@@ -17,6 +17,7 @@ import TicketsPage from './pages/TicketsPage';
 import ProfilePage from './pages/ProfilePage';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import SearchTickets from './pages/SearchTickets';
+import TicketDataPage from './pages/TicketDataPage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,6 +28,7 @@ const router = createBrowserRouter(
         // Переименовать auth
       }
       <Route path="tickets" element={<TicketsPage />} />
+      <Route path="ticket/:ticketNumber" element={<TicketDataPage />} />
       <Route path="search_tickets" element={<SearchTickets />} />
       <Route path="profile" element={<ProfilePage />} />
     </Route>

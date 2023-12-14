@@ -68,4 +68,16 @@
   .table-wrapper::-webkit-scrollbar-track:horizontal {
     @apply bg-gray-200 rounded-b;
   }
+
+  #messages_block::-webkit-scrollbar {
+    @apply w-[8px] h-[8px];
+  }
+
+  #messages_block::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded;
+  }
+
+  #messages_block::-webkit-scrollbar-track {
+    @apply bg-gray-200 rounded;
+  }
 }

@@ -10,6 +10,7 @@
       "closed_at": "19.09.2023 15:12",
       "type_request": "incident",
       "assigned_to": "Семенова Анна Васильевна",
+      "applicant_name": "Сапронов Руслан Иванович",
       "priority": "high",
       "completed": true,
       "messages": [
@@ -17,19 +18,127 @@
           "timestamp": "19.09.2023 15:10",
           "author": "Иванов Иван Иванович",
           "visible_to": "support",
-          "massage": "Сброшена зависшая сессия в менеджере лицензий"
+          "massage": "Сброшена зависшая сессия в менеджере лицензий",
+          "message_id": "ece5c983-faba-46cf-9a8b-0a9a1af584f6"
         },
         {
           "timestamp": "19.09.2023 15:12",
           "author": "Иванов Иван Иванович",
           "visible_to": "all",
-          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова."
+          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова.",
+          "message_id": "6a31be6c-3a4e-4e76-85af-776ddc6b26df"
         },
         {
           "timestamp": "19.09.2023 15:23",
           "author": "Новиков Сергей Витальевич",
           "visible_to": "all",
-          "massage": "Программа работает, спасибо!"
+          "massage": "Программа работает, спасибо!",
+          "message_id": "b54d5f3d-64d1-438d-ac08-e13501e308df"
+        },
+        {
+          "timestamp": "19.09.2023 15:10",
+          "author": "Иванов Иван Иванович",
+          "visible_to": "support",
+          "massage": "Сброшена зависшая сессия в менеджере лицензий",
+          "message_id": "ece5c983-faba-46cf-9a8b-0a9a1af584f6"
+        },
+        {
+          "timestamp": "19.09.2023 15:12",
+          "author": "Иванов Иван Иванович",
+          "visible_to": "all",
+          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова.",
+          "message_id": "6a31be6c-3a4e-4e76-85af-776ddc6b26df"
+        },
+        {
+          "timestamp": "19.09.2023 15:23",
+          "author": "Новиков Сергей Витальевич",
+          "visible_to": "all",
+          "massage": "Программа работает, спасибо!",
+          "message_id": "b54d5f3d-64d1-438d-ac08-e13501e308df"
+        },
+        {
+          "timestamp": "19.09.2023 15:10",
+          "author": "Иванов Иван Иванович",
+          "visible_to": "support",
+          "massage": "Сброшена зависшая сессия в менеджере лицензий",
+          "message_id": "ece5c983-faba-46cf-9a8b-0a9a1af584f6"
+        },
+        {
+          "timestamp": "19.09.2023 15:12",
+          "author": "Иванов Иван Иванович",
+          "visible_to": "all",
+          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова.",
+          "message_id": "6a31be6c-3a4e-4e76-85af-776ddc6b26df"
+        },
+        {
+          "timestamp": "19.09.2023 15:23",
+          "author": "Новиков Сергей Витальевич",
+          "visible_to": "all",
+          "massage": "Программа работает, спасибо!",
+          "message_id": "b54d5f3d-64d1-438d-ac08-e13501e308df"
+        },
+        {
+          "timestamp": "19.09.2023 15:10",
+          "author": "Иванов Иван Иванович",
+          "visible_to": "support",
+          "massage": "Сброшена зависшая сессия в менеджере лицензий",
+          "message_id": "ece5c983-faba-46cf-9a8b-0a9a1af584f6"
+        },
+        {
+          "timestamp": "19.09.2023 15:12",
+          "author": "Иванов Иван Иванович",
+          "visible_to": "all",
+          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова.",
+          "message_id": "6a31be6c-3a4e-4e76-85af-776ddc6b26df"
+        },
+        {
+          "timestamp": "19.09.2023 15:23",
+          "author": "Новиков Сергей Витальевич",
+          "visible_to": "all",
+          "massage": "Программа работает, спасибо!",
+          "message_id": "b54d5f3d-64d1-438d-ac08-e13501e308df"
+        },
+        {
+          "timestamp": "19.09.2023 15:10",
+          "author": "Иванов Иван Иванович",
+          "visible_to": "support",
+          "massage": "Сброшена зависшая сессия в менеджере лицензий",
+          "message_id": "ece5c983-faba-46cf-9a8b-0a9a1af584f6"
+        },
+        {
+          "timestamp": "19.09.2023 15:12",
+          "author": "Иванов Иван Иванович",
+          "visible_to": "all",
+          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова.",
+          "message_id": "6a31be6c-3a4e-4e76-85af-776ddc6b26df"
+        },
+        {
+          "timestamp": "19.09.2023 15:23",
+          "author": "Новиков Сергей Витальевич",
+          "visible_to": "all",
+          "massage": "Программа работает, спасибо!",
+          "message_id": "b54d5f3d-64d1-438d-ac08-e13501e308df"
+        },
+        {
+          "timestamp": "19.09.2023 15:10",
+          "author": "Иванов Иван Иванович",
+          "visible_to": "support",
+          "massage": "Сброшена зависшая сессия в менеджере лицензий",
+          "message_id": "ece5c983-faba-46cf-9a8b-0a9a1af584f6"
+        },
+        {
+          "timestamp": "19.09.2023 15:12",
+          "author": "Иванов Иван Иванович",
+          "visible_to": "all",
+          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова.",
+          "message_id": "6a31be6c-3a4e-4e76-85af-776ddc6b26df"
+        },
+        {
+          "timestamp": "19.09.2023 15:23",
+          "author": "Новиков Сергей Витальевич",
+          "visible_to": "all",
+          "massage": "Программа работает, спасибо!",
+          "message_id": "b54d5f3d-64d1-438d-ac08-e13501e308df"
         }
       ]
     },
@@ -43,6 +152,7 @@
       "closed_at": "",
       "type_request": "incident",
       "assigned_to": "",
+      "applicant_name": "",
       "priority": "",
       "completed": false,
       "messages": []
@@ -57,6 +167,7 @@
       "closed_at": "",
       "type_request": "incident",
       "assigned_to": "Иванов Иван Иванович",
+      "applicant_name": "",
       "priority": "",
       "completed": false,
       "messages": [
@@ -64,7 +175,8 @@
           "timestamp": "20.09.2023 10:02",
           "author": "Семенова Анна Васильевна",
           "visible_to": "all",
-          "massage": "Добрый день! Ваш компьютер был переподключен к сети. Прошу проверить и сообщить о результате."
+          "massage": "Добрый день! Ваш компьютер был переподключен к сети. Прошу проверить и сообщить о результате.",
+          "message_id": "8d6424a7-e15f-429d-9739-f4136253b5a7"
         }
       ]
     },
@@ -78,6 +190,7 @@
       "closed_at": "19.09.2023 15:12",
       "type_request": "incident",
       "assigned_to": "Семенова Анна Васильевна",
+      "applicant_name": "Иванов Иван Иванович",
       "priority": "high",
       "completed": true,
       "messages": [
@@ -85,19 +198,22 @@
           "timestamp": "19.09.2023 15:10",
           "author": "Иванов Иван Иванович",
           "visible_to": "support",
-          "massage": "Сброшена зависшая сессия в менеджере лицензий"
+          "massage": "Сброшена зависшая сессия в менеджере лицензий",
+          "message_id": "c17fcefe-e373-4ff4-8a37-a6245935e5e9"
         },
         {
           "timestamp": "19.09.2023 15:12",
           "author": "Иванов Иван Иванович",
           "visible_to": "all",
-          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова."
+          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова.",
+          "message_id": "44d7c6b2-4138-4285-80fd-f4451a952899"
         },
         {
           "timestamp": "19.09.2023 15:23",
           "author": "Новиков Сергей Витальевич",
           "visible_to": "all",
-          "massage": "Программа работает, спасибо!"
+          "massage": "Программа работает, спасибо!",
+          "message_id": "be493e74-3c0a-4b94-a567-cbc834cfe52b"
         }
       ]
     },
@@ -111,6 +227,7 @@
       "closed_at": "",
       "type_request": "incident",
       "assigned_to": "",
+      "applicant_name": "",
       "priority": "",
       "completed": false,
       "messages": []
@@ -125,6 +242,7 @@
       "closed_at": "",
       "type_request": "incident",
       "assigned_to": "Иванов Иван Иванович",
+      "applicant_name": "",
       "priority": "",
       "completed": false,
       "messages": [
@@ -132,7 +250,8 @@
           "timestamp": "20.09.2023 10:02",
           "author": "Семенова Анна Васильевна",
           "visible_to": "all",
-          "massage": "Добрый день! Ваш компьютер был переподключен к сети. Прошу проверить и сообщить о результате."
+          "massage": "Добрый день! Ваш компьютер был переподключен к сети. Прошу проверить и сообщить о результате.",
+          "message_id": "04e9250c-c94c-4195-9468-4507ff4ad38d"
         }
       ]
     },
@@ -146,6 +265,7 @@
       "closed_at": "19.09.2023 15:12",
       "type_request": "incident",
       "assigned_to": "Семенова Анна Васильевна",
+      "applicant_name": "Сапронов Руслан Иванович",
       "priority": "high",
       "completed": true,
       "messages": [
@@ -153,19 +273,22 @@
           "timestamp": "19.09.2023 15:10",
           "author": "Иванов Иван Иванович",
           "visible_to": "support",
-          "massage": "Сброшена зависшая сессия в менеджере лицензий"
+          "massage": "Сброшена зависшая сессия в менеджере лицензий",
+          "message_id": "5e793aa1-bd35-4f4b-8b73-18088037db89"
         },
         {
           "timestamp": "19.09.2023 15:12",
           "author": "Иванов Иван Иванович",
           "visible_to": "all",
-          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова."
+          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова.",
+          "message_id": "73e42fcf-af49-4110-8845-e94ab2968997"
         },
         {
           "timestamp": "19.09.2023 15:23",
           "author": "Новиков Сергей Витальевич",
           "visible_to": "all",
-          "massage": "Программа работает, спасибо!"
+          "massage": "Программа работает, спасибо!",
+          "message_id": "5a52ae12-2c0d-4545-9178-aace426b92c6"
         }
       ]
     },
@@ -179,6 +302,7 @@
       "closed_at": "",
       "type_request": "incident",
       "assigned_to": "",
+      "applicant_name": "",
       "priority": "",
       "completed": false,
       "messages": []
@@ -193,6 +317,7 @@
       "closed_at": "",
       "type_request": "incident",
       "assigned_to": "Иванов Иван Иванович",
+      "applicant_name": "",
       "priority": "",
       "completed": false,
       "messages": [
@@ -200,7 +325,8 @@
           "timestamp": "20.09.2023 10:02",
           "author": "Семенова Анна Васильевна",
           "visible_to": "all",
-          "massage": "Добрый день! Ваш компьютер был переподключен к сети. Прошу проверить и сообщить о результате."
+          "massage": "Добрый день! Ваш компьютер был переподключен к сети. Прошу проверить и сообщить о результате.",
+          "message_id": "2966f8b0-845f-4528-a736-754aace58611"
         }
       ]
     },
@@ -214,6 +340,7 @@
       "closed_at": "19.09.2023 15:12",
       "type_request": "incident",
       "assigned_to": "Семенова Анна Васильевна",
+      "applicant_name": "Иванов Иван Иванович",
       "priority": "high",
       "completed": true,
       "messages": [
@@ -221,19 +348,22 @@
           "timestamp": "19.09.2023 15:10",
           "author": "Иванов Иван Иванович",
           "visible_to": "support",
-          "massage": "Сброшена зависшая сессия в менеджере лицензий"
+          "massage": "Сброшена зависшая сессия в менеджере лицензий",
+          "message_id": "876e3bef-b9a4-446b-9978-7efb4fdc950a"
         },
         {
           "timestamp": "19.09.2023 15:12",
           "author": "Иванов Иван Иванович",
           "visible_to": "all",
-          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова."
+          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова.",
+          "message_id": "93a76954-7cfa-4e84-be58-f3cdc42823a3"
         },
         {
           "timestamp": "19.09.2023 15:23",
           "author": "Новиков Сергей Витальевич",
           "visible_to": "all",
-          "massage": "Программа работает, спасибо!"
+          "massage": "Программа работает, спасибо!",
+          "message_id": "a79a1af3-7dc1-44ee-93d2-685e63579d8b"
         }
       ]
     },
@@ -247,6 +377,7 @@
       "closed_at": "",
       "type_request": "incident",
       "assigned_to": "",
+      "applicant_name": "",
       "priority": "",
       "completed": false,
       "messages": []
@@ -261,6 +392,7 @@
       "closed_at": "",
       "type_request": "incident",
       "assigned_to": "Иванов Иван Иванович",
+      "applicant_name": "",
       "priority": "",
       "completed": false,
       "messages": [
@@ -268,7 +400,8 @@
           "timestamp": "20.09.2023 10:02",
           "author": "Семенова Анна Васильевна",
           "visible_to": "all",
-          "massage": "Добрый день! Ваш компьютер был переподключен к сети. Прошу проверить и сообщить о результате."
+          "massage": "Добрый день! Ваш компьютер был переподключен к сети. Прошу проверить и сообщить о результате.",
+          "message_id": "231419fc-2362-45a8-8126-46444671db73"
         }
       ]
     },
@@ -282,9 +415,10 @@
       "type_request": "incident",
       "user_id": 0,
       "assigned_to": "",
-      "messages": [],
+      "applicant_name": "Семенова Анна Васильевна",
       "priority": "",
-      "completed": true
+      "completed": true,
+      "messages": []
     },
     {
       "id": "28348346-57a1-48a4-a97e-6hnd6de2d3b",
@@ -296,9 +430,10 @@
       "type_request": "incident",
       "user_id": 0,
       "assigned_to": "",
-      "messages": [],
+      "applicant_name": "",
       "priority": "",
-      "completed": false
+      "completed": false,
+      "messages": []
     },
     {
       "id": "56248f32-4943-4b4c-b471-4030c5878aed",
@@ -310,9 +445,10 @@
       "type_request": "incident",
       "user_id": 0,
       "assigned_to": "",
-      "messages": [],
+      "applicant_name": "Павлов Антон Константинович",
       "priority": "",
-      "completed": true
+      "completed": true,
+      "messages": []
     },
     {
       "id": "8ca03708-ce02-4d7a-bc5d-d413e8cb9f6f",
@@ -324,9 +460,10 @@
       "type_request": "question",
       "user_id": 0,
       "assigned_to": "",
-      "messages": [],
+      "applicant_name": "",
       "priority": "high",
-      "completed": false
+      "completed": false,
+      "messages": []
     },
     {
       "id": "28348346-57a1-48a4-a97e-0ecf67de2d3b",
@@ -338,6 +475,7 @@
       "closed_at": "19.09.2023 15:12",
       "type_request": "incident",
       "assigned_to": "Семенова Анна Васильевна",
+      "applicant_name": "Павлов Антон Константинович",
       "priority": "high",
       "completed": true,
       "messages": [
@@ -345,19 +483,22 @@
           "timestamp": "19.09.2023 15:10",
           "author": "Иванов Иван Иванович",
           "visible_to": "support",
-          "massage": "Сброшена зависшая сессия в менеджере лицензий"
+          "massage": "Сброшена зависшая сессия в менеджере лицензий",
+          "message_id": "8e51077c-62d8-4f1c-bc48-7ba5f379e345"
         },
         {
           "timestamp": "19.09.2023 15:12",
           "author": "Иванов Иван Иванович",
           "visible_to": "all",
-          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова."
+          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова.",
+          "message_id": "5cb32d93-f449-4166-a11b-d371c086567a"
         },
         {
           "timestamp": "19.09.2023 15:23",
           "author": "Новиков Сергей Витальевич",
           "visible_to": "all",
-          "massage": "Программа работает, спасибо!"
+          "massage": "Программа работает, спасибо!",
+          "message_id": "1779961a-de42-4378-8f32-0e60a46fcc22"
         }
       ]
     },
@@ -371,6 +512,7 @@
       "closed_at": "",
       "type_request": "incident",
       "assigned_to": "",
+      "applicant_name": "",
       "priority": "",
       "completed": false,
       "messages": []
@@ -385,6 +527,7 @@
       "closed_at": "",
       "type_request": "incident",
       "assigned_to": "Иванов Иван Иванович",
+      "applicant_name": "",
       "priority": "",
       "completed": false,
       "messages": [
@@ -392,7 +535,8 @@
           "timestamp": "20.09.2023 10:02",
           "author": "Семенова Анна Васильевна",
           "visible_to": "all",
-          "massage": "Добрый день! Ваш компьютер был переподключен к сети. Прошу проверить и сообщить о результате."
+          "massage": "Добрый день! Ваш компьютер был переподключен к сети. Прошу проверить и сообщить о результате.",
+          "message_id": "3d79e859-da95-4368-b264-4c5834994bc7"
         }
       ]
     },
@@ -406,6 +550,7 @@
       "closed_at": "19.09.2023 15:12",
       "type_request": "incident",
       "assigned_to": "Семенова Анна Васильевна",
+      "applicant_name": "Сапронов Руслан Иванович",
       "priority": "high",
       "completed": true,
       "messages": [
@@ -413,19 +558,22 @@
           "timestamp": "19.09.2023 15:10",
           "author": "Иванов Иван Иванович",
           "visible_to": "support",
-          "massage": "Сброшена зависшая сессия в менеджере лицензий"
+          "massage": "Сброшена зависшая сессия в менеджере лицензий",
+          "message_id": "acbd1eab-78d8-4205-9caa-75c167b47027"
         },
         {
           "timestamp": "19.09.2023 15:12",
           "author": "Иванов Иван Иванович",
           "visible_to": "all",
-          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова."
+          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова.",
+          "message_id": "2d04b753-c7c3-4180-b618-35b84b697400"
         },
         {
           "timestamp": "19.09.2023 15:23",
           "author": "Новиков Сергей Витальевич",
           "visible_to": "all",
-          "massage": "Программа работает, спасибо!"
+          "massage": "Программа работает, спасибо!",
+          "message_id": "de77eb1c-cd76-42f5-bdfb-2a62d0927d6e"
         }
       ]
     },
@@ -439,6 +587,7 @@
       "closed_at": "",
       "type_request": "incident",
       "assigned_to": "",
+      "applicant_name": "",
       "priority": "",
       "completed": false,
       "messages": []
@@ -453,6 +602,7 @@
       "closed_at": "",
       "type_request": "incident",
       "assigned_to": "Иванов Иван Иванович",
+      "applicant_name": "",
       "priority": "",
       "completed": false,
       "messages": [
@@ -460,7 +610,8 @@
           "timestamp": "20.09.2023 10:02",
           "author": "Семенова Анна Васильевна",
           "visible_to": "all",
-          "massage": "Добрый день! Ваш компьютер был переподключен к сети. Прошу проверить и сообщить о результате."
+          "massage": "Добрый день! Ваш компьютер был переподключен к сети. Прошу проверить и сообщить о результате.",
+          "message_id": "f0641166-1609-4f10-acae-46d657ad97e3"
         }
       ]
     },
@@ -474,6 +625,7 @@
       "closed_at": "19.09.2023 15:12",
       "type_request": "incident",
       "assigned_to": "Семенова Анна Васильевна",
+      "applicant_name": "Иванов Иван Иванович",
       "priority": "high",
       "completed": true,
       "messages": [
@@ -481,19 +633,22 @@
           "timestamp": "19.09.2023 15:10",
           "author": "Иванов Иван Иванович",
           "visible_to": "support",
-          "massage": "Сброшена зависшая сессия в менеджере лицензий"
+          "massage": "Сброшена зависшая сессия в менеджере лицензий",
+          "message_id": "2f9e9485-b319-43a6-b08a-2048058bf82a"
         },
         {
           "timestamp": "19.09.2023 15:12",
           "author": "Иванов Иван Иванович",
           "visible_to": "all",
-          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова."
+          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова.",
+          "message_id": "9eac5dbe-50dd-4888-a404-0c9eb14b3bac"
         },
         {
           "timestamp": "19.09.2023 15:23",
           "author": "Новиков Сергей Витальевич",
           "visible_to": "all",
-          "massage": "Программа работает, спасибо!"
+          "massage": "Программа работает, спасибо!",
+          "message_id": "d9842b69-3635-4c03-9748-c68153ddd448"
         }
       ]
     },
@@ -507,6 +662,7 @@
       "closed_at": "",
       "type_request": "incident",
       "assigned_to": "",
+      "applicant_name": "",
       "priority": "",
       "completed": false,
       "messages": []
@@ -521,6 +677,7 @@
       "closed_at": "",
       "type_request": "incident",
       "assigned_to": "Иванов Иван Иванович",
+      "applicant_name": "",
       "priority": "",
       "completed": false,
       "messages": [
@@ -528,7 +685,8 @@
           "timestamp": "20.09.2023 10:02",
           "author": "Семенова Анна Васильевна",
           "visible_to": "all",
-          "massage": "Добрый день! Ваш компьютер был переподключен к сети. Прошу проверить и сообщить о результате."
+          "massage": "Добрый день! Ваш компьютер был переподключен к сети. Прошу проверить и сообщить о результате.",
+          "message_id": "91f760cb-ac24-421e-89e5-2c2813bea383"
         }
       ]
     },
@@ -542,6 +700,7 @@
       "closed_at": "19.09.2023 15:12",
       "type_request": "incident",
       "assigned_to": "Семенова Анна Васильевна",
+      "applicant_name": "Павлов Антон Константинович",
       "priority": "high",
       "completed": true,
       "messages": [
@@ -549,19 +708,22 @@
           "timestamp": "19.09.2023 15:10",
           "author": "Иванов Иван Иванович",
           "visible_to": "support",
-          "massage": "Сброшена зависшая сессия в менеджере лицензий"
+          "massage": "Сброшена зависшая сессия в менеджере лицензий",
+          "message_id": "3678ccc6-b528-4d26-b73f-15744a0e32bb"
         },
         {
           "timestamp": "19.09.2023 15:12",
           "author": "Иванов Иван Иванович",
           "visible_to": "all",
-          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова."
+          "massage": "Добрый день! Перезапустите компьютер и попробуйте запустить программу снова.",
+          "message_id": "eaa6aca1-3391-4e3a-bbb3-8994ec05f52a"
         },
         {
           "timestamp": "19.09.2023 15:23",
           "author": "Новиков Сергей Витальевич",
           "visible_to": "all",
-          "massage": "Программа работает, спасибо!"
+          "massage": "Программа работает, спасибо!",
+          "message_id": "4e994cd4-b194-4109-b4ac-d2fa2ad97480"
         }
       ]
     },
@@ -575,6 +737,7 @@
       "closed_at": "",
       "type_request": "incident",
       "assigned_to": "",
+      "applicant_name": "",
       "priority": "",
       "completed": false,
       "messages": []
@@ -589,6 +752,7 @@
       "closed_at": "",
       "type_request": "incident",
       "assigned_to": "Иванов Иван Иванович",
+      "applicant_name": "",
       "priority": "",
       "completed": false,
       "messages": [
@@ -596,7 +760,8 @@
           "timestamp": "20.09.2023 10:02",
           "author": "Семенова Анна Васильевна",
           "visible_to": "all",
-          "massage": "Добрый день! Ваш компьютер был переподключен к сети. Прошу проверить и сообщить о результате."
+          "massage": "Добрый день! Ваш компьютер был переподключен к сети. Прошу проверить и сообщить о результате.",
+          "message_id": "61cc9899-7e6f-4ab2-91d7-1840afd6476e"
         }
       ]
     },
@@ -609,10 +774,11 @@
       "closed_at": "",
       "type_request": "incident",
       "user_id": 0,
-      "assigned_to": "",
-      "messages": [],
+      "assigned_to": "Сапронов Руслан Иванович",
+      "applicant_name": "Павлов Антон Константинович",
       "priority": "",
-      "completed": true
+      "completed": true,
+      "messages": []
     },
     {
       "id": "28348346-57a1-48a4-a97e-6hnd6de2d3b",
@@ -624,9 +790,10 @@
       "type_request": "incident",
       "user_id": 0,
       "assigned_to": "",
-      "messages": [],
+      "applicant_name": "",
       "priority": "",
-      "completed": false
+      "completed": false,
+      "messages": []
     },
     {
       "id": "56248f32-4943-4b4c-b471-4030c5878aed",
@@ -638,9 +805,10 @@
       "type_request": "incident",
       "user_id": 0,
       "assigned_to": "",
-      "messages": [],
+      "applicant_name": "",
       "priority": "",
-      "completed": true
+      "completed": true,
+      "messages": []
     },
     {
       "id": "8ca03708-ce02-4d7a-bc5d-d413e8cb9f6f",
@@ -652,9 +820,10 @@
       "type_request": "question",
       "user_id": 0,
       "assigned_to": "",
-      "messages": [],
+      "applicant_name": "",
       "priority": "high",
-      "completed": false
+      "completed": false,
+      "messages": []
     }
   ],
   "users": [
@@ -720,7 +889,7 @@
       "email": "rsapronov@mail.com",
       "login": "rsapronov",
       "password": "12345",
-      "role": "user"
+      "role": "support"
     }
   ]
 }

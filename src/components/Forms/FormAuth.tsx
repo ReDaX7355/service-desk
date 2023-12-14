@@ -43,7 +43,11 @@ const FormAuth: FC = () => {
     } else {
       signIn?.(response.data);
       localStorage.setItem('user_login', data.login);
-      navigate('/tickets');
+      if (response.data?.role === 'support') {
+        navigate('/tickets');
+      } else {
+        navigate('/profile');
+      }
     }
   };
 
