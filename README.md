@@ -5,6 +5,9 @@
 
 ---
 
+This application is a system for submitting and processing tickets from users.
+It contains functionality of sending, commenting and closing tickets. There is also a division of users into roles: "Support" and "User".
+
 Webpack and other configs were created from scratch.
 
 The project uses json-server as part of the Back-end.
@@ -30,8 +33,12 @@ To start the dev server, you need to write the commands:
 
 - [React](https://react.dev/)
 
-- [TypeScript](https://www.typescriptlang.org/)
+- [React Hook Form](https://react-hook-form.com/)
+
+- [React Query](https://tanstack.com/query/v3/docs/react/overview/)
 
 - [json-server](https://github.com/typicode/json-server)
 
 - [Tailwind](https://tailwindui.com/)
+
+- [Axios](https://axios-http.com/?ref=blog)
