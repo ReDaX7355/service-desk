@@ -1,7 +1,9 @@
-export default interface IMessage {
+interface IMessage {
   message_id: string;
   timestamp: string;
   author: string;
   visible_to: string;
   massage: string;
 }
+
+export default IMessage;

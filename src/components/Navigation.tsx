@@ -20,7 +20,7 @@ const Navigation = () => {
                     [isActive ? 'nav-link-active' : 'nav-link'].join(' ')
                   }
                 >
-                  Заявки
+                  Открытые заявки
                 </NavLink>
               </li>
               <li>

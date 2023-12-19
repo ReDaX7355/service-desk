@@ -1,3 +1,9 @@
 {
-  "css.lint.unknownAtRules": "ignore"
+  "css.lint.unknownAtRules": "ignore",
+  "vs-code-prettier-eslint.prettierLast": true,
+  "editor.formatOnSave": true,
+  "eslint.codeActionsOnSave.rules": null,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }

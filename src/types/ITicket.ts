@@ -12,7 +12,7 @@ interface ITicket {
   assigned_to: string;
   priority: string;
   completed: boolean;
-  messages: IMessage[];
+  messages: IMessage[] | [];
 }
 
 export default ITicket;
