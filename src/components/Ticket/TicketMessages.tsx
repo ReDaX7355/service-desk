@@ -6,6 +6,7 @@ interface TicketMessagesProps {
 }
 
 const TicketMessages: FC<TicketMessagesProps> = ({ messages }) => {
+
   useEffect(() => {
     if (messages){
       const messagesBlock = document.getElementById(
@@ -38,10 +39,12 @@ const TicketMessages: FC<TicketMessagesProps> = ({ messages }) => {
             </li>
           ))} 
         </ul>) : <p>Комментариев нет</p>}
-      
-      
     </div>
   );
 };
 
-export default TicketMessages;
+const MemoizedMyComponent = React.memo(TicketMessages);
+
+MemoizedMyComponent.displayName = 'TicketMessages';
+
+export default MemoizedMyComponent;

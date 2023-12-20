@@ -37,7 +37,7 @@ export const getAllTickets = async () => {
 };
 
 export const getOpenTickets = async () => {
-  const response = await $api.get('tickets?completed=false');
+  const response = await $api.get('tickets?completed=false&assigned_to');
   return response.data;
 };
 

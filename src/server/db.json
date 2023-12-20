@@ -774,10 +774,10 @@
       "closed_at": "",
       "type_request": "incident",
       "user_id": 0,
-      "assigned_to": "Сапронов Руслан Иванович",
+      "assigned_to": "Cапронов Руслан Иванович",
       "applicant_name": "Павлов Антон Константинович",
       "priority": "",
-      "completed": true,
+      "completed": false,
       "messages": []
     },
     {

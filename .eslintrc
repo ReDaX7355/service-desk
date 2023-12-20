@@ -50,6 +50,9 @@
     "no-undef": [0]
   },
   "settings": {
+    "react": {
+      "version": "detect"
+    },
     "tailwindcss": {
       // These are the default values but feel free to customize
       "callees": ["classnames", "clsx", "ctl"],

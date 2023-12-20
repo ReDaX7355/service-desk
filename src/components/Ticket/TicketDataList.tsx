@@ -28,24 +28,19 @@ const TicketDataList:FC<TicketDataListProps> = ({data}) => {
       />
       <TicketDataListItem 
         title={'Тип заявки'}
-        value={''}
-        changerFunction ={(value) => value === 'incident' ? 'Инцидент' : 'Вопрос'}
+        value={data.type_request === 'incident' ? 'Инцидент' : 'Вопрос'}
       />
       <TicketDataListItem 
         title={'Приоритет'}
-        value={data.priority}
-        changerFunction ={(value) => value === '' ? 'Обычный' : 'Высокий'}
+        value={data.priority === '' ? 'Обычный' : 'Высокий'}
       />
       <TicketDataListItem 
         title={'Исполнитель'}
-        value={data.assigned_to}
-        changerFunction ={(value) => value ? value : 'Не назначен'}
+        value={data.assigned_to ? data.assigned_to : 'Не назначен'}
       />
       <TicketDataListItem
         title={'Статус заявки'}
-        value={''}
-        changerFunction ={(value) => value
-          ? 'Закрыта'
+        value={data.completed ? 'Закрыта'
           : data.assigned_to
             ? 'В работе'
             : 'Открыта'}
