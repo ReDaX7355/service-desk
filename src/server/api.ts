@@ -45,10 +45,18 @@ export const getTicketByNumber = async (
   number: string | number | undefined
 ) => {
   const response = await $api.get(`tickets?ticket_number=${number}`);
-  return response.data;
+  return response.data[0];
 };
 
 export const searchTickets = async (value: string | number) => {
   const response = await $api.get(`tickets?q=${value}`);
   return response.data;
+};
+
+export const setTicketComplete = async (ticketId: string) => {
+  const response = await $api.patch(`tickets/${ticketId}`, {
+    'completed': true
+  });
+
+  return response;
 };
