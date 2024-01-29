@@ -31,6 +31,10 @@
     @apply py-2 px-4 table-auto min-w-full max-h-[400px] overflow-y-auto rounded-lg;
   }
 
+  .header-cell{
+    @apply cursor-pointer border-r-[1px] border-white
+  }
+
   .table-tickets td {
     @apply py-2 px-4 text-left truncate border border-gray-200;
   }

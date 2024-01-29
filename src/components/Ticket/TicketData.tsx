@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
-import { getTicketByNumber } from '../../server/api';
+import { getTicketByNumber, setTicketComplete } from '../../server/api';
 import ITicket from '../../types/ITicket';
 import TicketMessages from './TicketMessages';
 import TicketDataList from './TicketDataList';
@@ -23,6 +23,18 @@ const TicketData: FC<TicketDataProps> = ({ number }) => {
     }
   }, [number]);
 
+  const handleAction = async () => {
+    if (ticketData?.assigned_to){
+      setTicketData({
+        ...ticketData,
+        completed: true,
+      });
+      
+      await setTicketComplete(ticketData?.id);
+    }
+    
+  };
+
   
   return (
     <div className="rounded bg-white p-7 md:h-[700px]">
@@ -38,7 +50,7 @@ const TicketData: FC<TicketDataProps> = ({ number }) => {
           <div className="flex items-center justify-between">
             <TicketDataTitle text="Комментарии к заявке" />
             {!ticketData.completed &&
-            <TicketAction id={ticketData.id} assigned={ticketData.assigned_to}
+            <TicketAction assigned={ticketData.assigned_to} action={handleAction}
             />
             }
           </div>

@@ -19,7 +19,7 @@ const HeaderCell: FC<HeaderCellProps> = ({
   };
 
   return (
-    <th className="" data-name={dataName} onClick={(e) => sortByTitle(e)}>
+    <th className="header-cell" data-name={dataName} onClick={(e) => sortByTitle(e)}>
       <div className="flex items-center justify-between">
         <p>{children}</p>
 

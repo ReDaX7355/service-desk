@@ -3,7 +3,7 @@ import { IUser } from '../types/IUser';
 
 export const $api = axios.create({
   baseURL: 'http://localhost:3000/',
-  timeout: 1000,
+  // timeout: 1000,
 });
 
 export const userRegistration = async (user: IUser) => {
@@ -53,9 +53,9 @@ export const searchTickets = async (value: string | number) => {
   return response.data;
 };
 
-export const setTicketComplete = async (ticketId: string) => {
-  const response = await $api.patch(`tickets/${ticketId}`, {
-    'completed': true
+export const setTicketComplete = async (ticketId: string | undefined) => {
+  const response = $api.patch(`tickets/${ticketId}`, {
+    completed: true,
   });
 
   return response;

@@ -8,7 +8,7 @@
     "dev": "webpack --mode development --config ./webpack/webpack.dev.js",
     "build": "webpack --mode production --config ./webpack/webpack.prod.js",
     "start": "webpack-dev-server --mode development --config ./webpack/webpack.dev.js --hot --open",
-    "backend": "json-server -w ./src/server/db.json",
+    "backend": "json-server --watch ./src/server/db.json",
     "lint": "eslint ./src",
     "lint:debug": "eslint ./src --debug",
     "lint:fix": "eslint ./src --fix"

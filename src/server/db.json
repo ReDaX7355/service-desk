@@ -776,7 +776,7 @@
       "user_id": 0,
       "assigned_to": "Cапронов Руслан Иванович",
       "applicant_name": "Павлов Антон Константинович",
-      "priority": "",
+      "priority": "", 
       "completed": false,
       "messages": []
     },
