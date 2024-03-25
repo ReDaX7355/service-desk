@@ -24,3 +24,9 @@ yarn-error.log*
 
 /dist
 _db_changer.js
+
+
+//CodeSandBox
+.codesandbox
+.devcontainer
+.github
