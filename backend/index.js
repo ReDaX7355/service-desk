@@ -1,9 +1,13 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import TicketsRouter from "./routes/Tickets.js";
 dotenv.config();
 
 const server = express();
+
+server.use(express.json());
+server.use("/api", TicketsRouter);
 
 const port = process.env.PORT || 5000;
 
