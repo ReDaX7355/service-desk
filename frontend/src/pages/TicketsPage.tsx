@@ -1,16 +1,16 @@
-import React, { FC } from 'react';
-import TicketsTable from '../components/TicketsTable/TicketsTable';
-import { useQuery } from 'react-query';
-import ITicket from './../types/ITicket';
-import { getOpenTickets } from './../server/api';
+import React, { FC } from "react";
+import TicketsTable from "../components/TicketsTable/TicketsTable";
+import { useQuery } from "react-query";
+import ITicket from "./../types/ITicket";
+import { getOpenTickets } from "./../server/api";
 
 const TicketsPage: FC = () => {
   const { data, isError, isLoading } = useQuery<ITicket[]>(
-    'tickets',
+    "tickets",
     getOpenTickets,
     {
       refetchOnWindowFocus: false,
-    }
+    },
   );
 
   return (
