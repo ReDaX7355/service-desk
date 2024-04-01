@@ -1,5 +1,5 @@
 
-# SPA app "Service Desk"
+# React app "Service Desk"
 
 ### This react app created for my portfolio
 
