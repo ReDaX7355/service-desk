@@ -13,13 +13,15 @@ const getTicketsById = async (req, res) => {
   try {
     const { id } = req.params;
     if (!id) {
-      res.status(400).json({ message: "Id not input" });
+      res.status(400).json({ message: "Id not input or invalid format" });
     }
     const ticket = await Ticket.findById(id);
-
+    if (!ticket) {
+      res.status(404).json({ message: "Ticket not found" });
+    }
     res.status(200).json(ticket);
   } catch (error) {
-    console.log(error);
+    res.status(500).json({ message: "Internal server" });
   }
 };
 
@@ -31,9 +33,13 @@ const addTicket = async (req, res) => {
       ...data,
     });
 
+    if (!newTicket) {
+      res.status(404).json({ message: "Ticket not created" });
+    }
+
     res.status(201).json(newTicket);
   } catch (error) {
-    console.log(error);
+    res.status(500).json({ message: "Internal server" });
   }
 };
 
@@ -49,9 +55,13 @@ const updateTicket = async (req, res) => {
       new: true,
     });
 
+    if (!newTicket) {
+      res.status(404).json({ message: "Ticket not updated" });
+    }
+
     res.status(200).json(newTicket);
   } catch (error) {
-    console.log(error);
+    res.status(500).json({ message: "Internal server" });
   }
 };
 
@@ -67,11 +77,19 @@ const deleteTicket = async (req, res) => {
 
     const ticket = await Ticket.findByIdAndDelete(id);
 
+    if (!ticket) {
+      res.status(404).json({
+        message: `Ticket not found`,
+      });
+    }
+
     res.status(200).json({
       message: `Ticket id - ${id} has been deleted!`,
     });
   } catch (error) {
-    console.log(error);
+    res.status(500).json({
+      message: `Internal server`,
+    });
   }
 };
 
