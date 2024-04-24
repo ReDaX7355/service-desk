@@ -1,41 +1,34 @@
-import User from "../models/User.js";
+import UserModel from "../models/User.js";
 import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
-
-const generateAccessToken = (id, role) => {
-  const payload = {
-    id,
-    role,
-  };
-
-  return jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: "24h" });
-};
+import { userRegistration } from "./../service/authService.js";
 
 const registration = async (req, res) => {
   try {
     const { login, email, password } = req.body;
 
-    const candidate = await User.findOne({ login });
+    const responseData = await userRegistration(login, email, password);
 
-    if (candidate) {
-      return res
-        .status(400)
-        .json({ message: "Пользователь с таким логином уже существует" });
+    if (responseData.refreshToken) {
+      res.cookie("refreshToken", responseData.refreshToken, {
+        maxAge: 30 * 24 * 60 * 60 * 1000,
+        httpOnly: true,
+      });
+      return res.status(201).json(responseData);
+    } else {
+      return res.status(400).json(responseData);
     }
-
-    const hashPassword = bcrypt.hashSync(password, 5);
-
-    const user = await User.create({ login, email, password: hashPassword });
-    res.status(201).json({ message: "Пользователь успешно зарегистрирован" });
   } catch (error) {
-    res.status(500).json({ message: "Internal server error" });
+    console.log(error);
+    return res
+      .status(500)
+      .json({ message: "Internal server error", error: error });
   }
 };
 
 const login = async (req, res) => {
   try {
     const { login, password } = req.body;
-    const user = await User.findOne({ login });
+    const user = await UserModel.findOne({ login });
     if (!user) {
       return res.status(400).json({ message: "Пользователь не найден" });
     }
@@ -46,10 +39,19 @@ const login = async (req, res) => {
     }
 
     const token = generateAccessToken(user._id, user.role);
-    res.json({ token });
+    return res.json({ token });
   } catch (error) {
-    res.status(500).json({ message: "Internal server error" });
+    return res
+      .status(500)
+      .json({ message: "Internal server error", error: error });
   }
 };
 
-export { registration, login };
+const logout = (req, res) => {
+  try {
+  } catch (e) {}
+};
+
+const refresh = (req, res) => {};
+
+export { registration, login, logout, refresh };

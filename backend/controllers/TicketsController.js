@@ -1,4 +1,4 @@
-import Ticket from "../models/Ticket.js";
+import TicketModel from "../models/Ticket.js";
 
 const getAllTickets = async (req, res) => {
   try {
@@ -15,7 +15,7 @@ const getTicketsById = async (req, res) => {
     if (!id) {
       res.status(400).json({ message: "Id not input or invalid format" });
     }
-    const ticket = await Ticket.findById(id);
+    const ticket = await TicketModel.findById(id);
     if (!ticket) {
       res.status(404).json({ message: "Ticket not found" });
     }
@@ -29,7 +29,7 @@ const addTicket = async (req, res) => {
   try {
     const data = req.body;
 
-    const newTicket = await Ticket.create({
+    const newTicket = await TicketModel.create({
       ...data,
     });
 
@@ -51,7 +51,7 @@ const updateTicket = async (req, res) => {
       res.status(400).json({ message: "Not data for updated!" });
     }
 
-    const newTicket = await Ticket.findByIdAndUpdate(data._id, data, {
+    const newTicket = await TicketModel.findByIdAndUpdate(data._id, data, {
       new: true,
     });
 
@@ -75,7 +75,7 @@ const deleteTicket = async (req, res) => {
       });
     }
 
-    const ticket = await Ticket.findByIdAndDelete(id);
+    const ticket = await TicketModel.findByIdAndDelete(id);
 
     if (!ticket) {
       res.status(404).json({

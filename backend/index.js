@@ -3,11 +3,14 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import TicketsRouter from "./routes/Tickets.js";
 import AuthRouter from "./routes/Auth.js";
+import cookieParser from "cookie-parser";
 dotenv.config();
 
 const server = express();
 
 server.use(express.json());
+server.use(cookieParser());
+
 server.use("/api", TicketsRouter);
 server.use("/auth", AuthRouter);
 
