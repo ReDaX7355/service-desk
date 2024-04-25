@@ -1,57 +1,66 @@
-import UserModel from "../models/User.js";
-import bcrypt from "bcryptjs";
-import { userRegistration } from "./../service/authService.js";
+import {
+  userRegistration,
+  userLogin,
+  userLogout,
+} from "./../service/authService.js";
 
-const registration = async (req, res) => {
+const registration = async (req, res, next) => {
   try {
     const { login, email, password } = req.body;
 
     const responseData = await userRegistration(login, email, password);
 
-    if (responseData.refreshToken) {
-      res.cookie("refreshToken", responseData.refreshToken, {
-        maxAge: 30 * 24 * 60 * 60 * 1000,
-        httpOnly: true,
-      });
-      return res.status(201).json(responseData);
-    } else {
-      return res.status(400).json(responseData);
-    }
+    // res.cookie("refreshToken", responseData.refreshToken, {
+    //   maxAge: 30 * 24 * 60 * 60 * 1000,
+    //   httpOnly: true,
+    // });
+    return res.status(201).json(responseData);
   } catch (error) {
-    console.log(error);
-    return res
-      .status(500)
-      .json({ message: "Internal server error", error: error });
+    next(error);
   }
 };
 
-const login = async (req, res) => {
+const login = async (req, res, next) => {
   try {
     const { login, password } = req.body;
-    const user = await UserModel.findOne({ login });
-    if (!user) {
-      return res.status(400).json({ message: "Пользователь не найден" });
-    }
 
-    const validPassword = bcrypt.compareSync(password, user.password);
-    if (!validPassword) {
-      return res.status(400).json({ message: "Неверный пароль" });
-    }
+    const responseData = await userLogin(login, password);
 
-    const token = generateAccessToken(user._id, user.role);
-    return res.json({ token });
+    res.cookie("refreshToken", responseData.refreshToken, {
+      maxAge: 30 * 24 * 60 * 60 * 1000,
+      httpOnly: true,
+    });
+    return res.json(responseData);
   } catch (error) {
-    return res
-      .status(500)
-      .json({ message: "Internal server error", error: error });
+    next(error);
   }
 };
 
-const logout = (req, res) => {
+const logout = async (req, res, next) => {
   try {
-  } catch (e) {}
+    const { refreshToken } = req.cookies;
+    console.log(refreshToken);
+    await userLogout(refreshToken);
+    res.clearCookie("refreshToken");
+    res.status(200).json({ message: "Успешный выход из аккаунта" });
+  } catch (error) {
+    next(error);
+  }
 };
 
-const refresh = (req, res) => {};
+const refresh = async (req, res, next) => {
+  const { refreshToken } = req.cookies;
+
+  if (!refreshToken) {
+    throw ApiError.UnauthorizedError();
+  }
+
+  const responseData = await userRefreshToken(refreshToken);
+  res.cookie("refreshToken", responseData.refreshToken, {
+    maxAge: 30 * 24 * 60 * 60 * 1000,
+    httpOnly: true,
+  });
+  return res.json(responseData);
+};
 
 export { registration, login, logout, refresh };

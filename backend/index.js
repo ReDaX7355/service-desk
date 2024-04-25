@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import TicketsRouter from "./routes/Tickets.js";
 import AuthRouter from "./routes/Auth.js";
 import cookieParser from "cookie-parser";
+import { errorMiddleware } from "./middlewares/errorMiddleware.js";
 dotenv.config();
 
 const server = express();
@@ -13,6 +14,7 @@ server.use(cookieParser());
 
 server.use("/api", TicketsRouter);
 server.use("/auth", AuthRouter);
+server.use(errorMiddleware);
 
 const port = process.env.PORT || 5000;
 

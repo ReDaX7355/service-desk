@@ -2,7 +2,7 @@ import TicketModel from "../models/Ticket.js";
 
 const getAllTickets = async (req, res) => {
   try {
-    const allTickets = await Ticket.find();
+    const allTickets = await TicketModel.find();
     res.json(allTickets);
   } catch (error) {
     console.log(error);

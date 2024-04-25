@@ -7,13 +7,14 @@ import {
 } from "../controllers/TicketsController.js";
 
 import Router from "express";
+import { authMiddleware } from "../middlewares/authMiddleware.js";
 
 const TicketsRouter = new Router();
 
-TicketsRouter.get("/tickets", getAllTickets);
-TicketsRouter.get("/tickets/:id", getTicketsById);
-TicketsRouter.post("/tickets", addTicket);
-TicketsRouter.put("/tickets", updateTicket);
-TicketsRouter.delete("/tickets/:id", deleteTicket);
+TicketsRouter.get("/tickets", authMiddleware, getAllTickets);
+TicketsRouter.get("/tickets/:id", authMiddleware, getTicketsById);
+TicketsRouter.post("/tickets", authMiddleware, addTicket);
+TicketsRouter.put("/tickets", authMiddleware, updateTicket);
+TicketsRouter.delete("/tickets/:id", authMiddleware, deleteTicket);
 
 export default TicketsRouter;
