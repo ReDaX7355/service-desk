@@ -1,6 +1,6 @@
 import React, { FC, useReducer, createContext } from 'react';
-import { IUser } from './../types/IUser';
 import { ACTION_TYPES, defaultState, mainReduser } from './reduser';
+import { userDataType } from '../types/AuthTypes';
 
 interface MainStateProps {
   children?: React.ReactNode;
@@ -8,17 +8,17 @@ interface MainStateProps {
 
 interface contextValuesInterface {
   state: typeof defaultState;
-  signIn: (data: IUser | undefined) => void;
+  signIn: (userData: userDataType, accessToken: string) => void;
   signOut: () => void;
 }
 
-export const MainContext = createContext<Partial<contextValuesInterface>>({});
+export const MainContext = createContext({} as contextValuesInterface);
 
 const MainProvider: FC<MainStateProps> = ({ children }) => {
   const [state, dispatch] = useReducer(mainReduser, defaultState);
 
-  const signIn = (data: IUser | undefined) => {
-    dispatch({ type: ACTION_TYPES.SIGN_IN, userData: data });
+  const signIn = (userData: userDataType, accessToken: string) => {
+    dispatch({ type: ACTION_TYPES.SIGN_IN, userData, accessToken });
   };
 
   const signOut = () => {

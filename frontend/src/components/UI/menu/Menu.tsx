@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { MainContext } from './../../../context/MainProvider';
+import AuthService from '../../../services/AuthService';
 
 const Menu = () => {
   const { state, signOut } = useContext(MainContext);
@@ -8,8 +9,8 @@ const Menu = () => {
   const navigate = useNavigate();
 
   const signOutHandler = () => {
+    AuthService.logoutUser();
     signOut?.();
-    localStorage.removeItem('user_login');
     navigate('/');
   };
 
@@ -19,7 +20,7 @@ const Menu = () => {
         {state?.auth ? (
           <>
             <li>
-              <p className="text-white">{state.user?.full_name}</p>
+              <p className="text-white">{state.userData?.login}</p>
             </li>
             <li>
               <p onClick={() => signOutHandler()} className="button-invert">

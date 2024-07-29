@@ -14,15 +14,15 @@ function Root() {
 
   useEffect(() => {
     setIsLoading(true);
-    const userLogin = localStorage.getItem('user_login');
+    // const userLogin = localStorage.getItem('user_login');
 
-    if (userLogin) {
-      getUserByLogin(userLogin).then((data: IUser | undefined) => {
-        signIn?.(data);
-        navigate('/tickets');
-        setIsLoading(false);
-      });
-    }
+    // if (userLogin) {
+    //   getUserByLogin(userLogin).then((data: IUser | undefined) => {
+    //     signIn?.(data);
+    //     navigate('/tickets');
+    //     setIsLoading(false);
+    //   });
+    // }
     setIsLoading(false);
   }, []);
 

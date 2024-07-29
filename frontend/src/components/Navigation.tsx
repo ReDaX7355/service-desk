@@ -11,7 +11,7 @@ const Navigation = () => {
     <div className="bg-white">
       <div className="container mx-auto px-5">
         <ul className="flex gap-4">
-          {state.user?.role === 'support' && (
+          {state.userData?.role === 'support' && (
             <>
               <li>
                 <NavLink

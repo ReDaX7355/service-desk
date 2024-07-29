@@ -1,21 +1,24 @@
 import { Reducer } from 'react';
-import { IUser } from './../types/IUser';
+import { userDataType } from '../types/AuthTypes';
 
 type initStateType = {
   auth: boolean;
-  user?: IUser | null;
+  userData?: userDataType | null;
+  accessToken?: string;
   theme: string;
 };
 
 type reduserActionType = {
   type: ACTION_TYPES;
   payload?: string;
-  userData?: IUser;
+  userData?: userDataType;
+  accessToken?: string;
 };
 
 export const defaultState: initStateType = {
   auth: false,
-  user: undefined,
+  userData: undefined,
+  accessToken: '',
   theme: 'light',
 };
 
@@ -30,9 +33,14 @@ export const mainReduser: Reducer<initStateType, reduserActionType> = (
 ): initStateType => {
   switch (action.type) {
     case ACTION_TYPES.SIGN_IN:
-      return { ...state, auth: true, user: action.userData };
+      return {
+        ...state,
+        auth: true,
+        userData: action.userData,
+        accessToken: action.accessToken,
+      };
     case ACTION_TYPES.SIGN_OUT:
-      return { ...state, auth: false, user: null };
+      return { ...state, auth: false, userData: null, accessToken: '' };
 
     default:
       return state;
