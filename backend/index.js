@@ -1,0 +1,37 @@
+import express from 'express';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+import TicketsRouter from './routes/Tickets.js';
+import AuthRouter from './routes/Auth.js';
+import cookieParser from 'cookie-parser';
+import cors from 'cors';
+import { errorMiddleware } from './middlewares/errorMiddleware.js';
+dotenv.config();
+
+const server = express();
+
+server.use(express.json());
+server.use(cookieParser());
+server.use(
+  cors({
+    credentials: true,
+    origin: process.env.CLIENT_URL,
+  })
+);
+
+server.use('/api', TicketsRouter);
+server.use('/auth', AuthRouter);
+server.use(errorMiddleware);
+
+const port = process.env.PORT || 5000;
+
+async function startServer() {
+  try {
+    await mongoose.connect(process.env.DB_URL);
+    server.listen(port, () => console.log('Server started!'));
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+startServer();
